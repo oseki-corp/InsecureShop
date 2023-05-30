@@ -35,6 +35,7 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
+        queries: security-extended
     - name: Build SampleApplication
       run: ./gradlew --no-daemon build -x lint || true
     - name: Perform CodeQL Analysis
