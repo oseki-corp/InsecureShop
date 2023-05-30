@@ -36,6 +36,6 @@ jobs:
       with:
         languages: ${{ matrix.language }}
     - name: Build SampleApplication
-      run: cd InsecureShop-android && ./gradlew --no-daemon build -x lint || true
+      run: ./gradlew --no-daemon build -x lint || true
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
